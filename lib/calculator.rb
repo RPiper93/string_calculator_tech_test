@@ -6,7 +6,7 @@ class Calculator
 
   private
   def string_to_sum (string)
-    array = string.split(",")
+    array = string.split(/(,|\n)/)
     array.map! { |x| x.to_i }
     array.reduce(:+)
   end
