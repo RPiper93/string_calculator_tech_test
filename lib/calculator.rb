@@ -1,6 +1,11 @@
 class Calculator
   def addInt(string)
-    return 1 if string == "1"
-    0
+    return 0 if empty?(string)
+    string.to_i
+  end
+
+  private
+  def empty?(string)
+    string == ""
   end
 end
